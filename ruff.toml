@@ -1,0 +1,23 @@
+# configure on which files to run
+include = [
+    "src/**/*.py",
+    "tests/**/*.py",
+]
+exclude = [".venv", "build"]
+
+line-length = 80
+
+# configure formartting
+[format]
+quote-style = "double"
+
+#configure linting
+[lint]
+dummy-variable-rgx = "^(_+|unused_|ignored_|e$)"
+select = [
+    "Q",        # prefer double quotes
+    "F401",     # unused imports
+]
+
+[lint.pycodestyle]
+max-line-length = 88
